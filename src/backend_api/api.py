@@ -18,7 +18,7 @@ class UserSchema(Schema):
 @api.get("/hello")
 def user(request):
     print(request)
-    return "Hello World"
+    return {"message": "Hello World"}
 
 
 @api.get("/user", response=UserSchema, auth=JWTAuth())
