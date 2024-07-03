@@ -1,4 +1,4 @@
-        venv
+venv
 __pycache__
 *.pyc
 *.pyo
@@ -12,7 +12,6 @@ __pycache__
 *.bak
 *.swp
 *~
-*.swp
 *.swo
 *.swn
 *.swm
