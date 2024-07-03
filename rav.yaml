@@ -9,4 +9,6 @@ scripts:
     - cd src && python manage.py test
   shell:
     - cd src && python manage.py shell
+  createsuperuser:
+    - cd src && python manage.py createsuperuser
   # TODO: Add script to tun ruff in the future
