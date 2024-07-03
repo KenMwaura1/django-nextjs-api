@@ -4,12 +4,12 @@ from pydantic import EmailStr
 class WaitlistEntryCreateSchema(Schema):
     #Create -> Data
     # WaitlistEntryIn
-    email: str
+    email: EmailStr
     name: str
 
 class WaitlistEntryDetailSchema(Schema):
     # Get  -> Data
     # WaitlistEntryOut
-    email: str
+    email: EmailStr
     name: str
     timestamp: datetime
