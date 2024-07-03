@@ -1,0 +1,12 @@
+scripts:
+  server:
+    - cd src && python manage.py runserver 8001
+  make_migrations:
+    - cd src && python manage.py makemigrations
+  migrate:
+    - cd src && python manage.py migrate
+  test:
+    - cd src && python manage.py test
+  shell:
+    - cd src && python manage.py shell
+  # TODO: Add script to tun ruff in the future
