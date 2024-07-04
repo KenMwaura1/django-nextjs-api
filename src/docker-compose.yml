@@ -1,0 +1,25 @@
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8001:8000
+    volumes:
+      - .:/app
+    depends_on:
+        - db
+    environment:
+
+
+  db:
+    image: postgres:14.4
+    environment:
+        POSTGRES_DB: ${{ secrets.POSTGRES_DB }} || 'django_api'
+        POSTGRES_USER: ${{ secrets.POSTGRES_USER }} || 'postgres'
+        POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }} || 'postgres'
+    ports:
+        - 5432:5432
+    volumes:
+        - postgres_data:/var/lib/postgresql/data
